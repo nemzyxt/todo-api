@@ -22,8 +22,16 @@ import (
 	"github.com/gorilla/mux"
 )
 
+
+
 func main() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/tasks", createTask).Methods("POST")
+	router.HandleFunc("/tasks", getTasks).Methods("GET")
+	router.HandleFunc("/tasks/{taskId}", getTask).Methods("GET")
+	router.HandleFunc("/tasks", updateTask).Methods("PUT")
+	router.HandleFunc("/tasks", deleteTask).Methods("DELETE")
 
 	fmt.Println("[*] Server listening on port ...")
 	http.ListenAndServe(":8080", handlers.CORS()(router))
