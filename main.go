@@ -22,7 +22,25 @@ import (
 	"github.com/gorilla/mux"
 )
 
+func createTask(w http.ResponseWriter, r *http.Request) {
 
+}
+
+func getTasks(w http.ResponseWriter, r *http.Request) {
+	
+}
+
+func getTask(w http.ResponseWriter, r *http.Request) {
+	
+}
+
+func updateTask(w http.ResponseWriter, r *http.Request) {
+	
+}
+
+func deleteTask(w http.ResponseWriter, r *http.Request) {
+	
+}
 
 func main() {
 	router := mux.NewRouter()
