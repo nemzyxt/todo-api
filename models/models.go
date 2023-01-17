@@ -1,6 +1,6 @@
 package models
 
-type Todo struct {
+type Task struct {
 	Title string `json:"title"`
 	Description string `json:"description"`
 }
